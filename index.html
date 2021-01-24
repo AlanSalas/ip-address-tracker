@@ -6,46 +6,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-  <title>Frontend Mentor | IP Address Tracker</title>
+  <title>IP Address Tracker</title>
 </head>
 
-<body>
-  <div class="pattern-img"></div>
-  <div class="container">
-    <div class="header">
-      <h1>IP Address Tracker</h1>
-      <div class="search">
-        <input class="input-ip" type="text" name="" id="" placeholder="Search for any IP address or domain">
-        <span class="icon-arrow"><img src="./images/icon-arrow.svg" alt="icon-arrow"></span>
-      </div>
-      <div class="info-ip">
-        <div class="section">
-          <h5>IP ADDRESS</h5>
-          <P>192.212.174.101</P>
+<body class="dark">
+    <main>
+        <div class="wrapper">
+            <div class="actions">
+                <button class="actions__theme">Dark mode</button>
+                <a class="actions__about" href="#">About me</a>
+            </div>
+            <div class="header">
+                <h1>Ip Address Tracker</h1>
+                <p>Try to put different ip address and domains and see their location</p>
+                <form id="form">
+                    <div class="header__input">
+                        <input type="text" id="input-ip" placeholder="Ip address or domain">
+                        <button type="submit" id="btn-submit">Search</button>
+                    </div>
+                </form>
+            </div>
+            <div class="info-ip">
+                <div class="info-ip__item">
+                    <h2><i class="fas fa-globe"></i> Ip Address</h2>
+                    <span id="ip">Loading...</span>
+                </div>
+                <div class="info-ip__item">
+                    <h2><i class="fas fa-map-marker-alt"></i> Location</h2>
+                    <span id="location">Loading...</span>
+                </div>
+                <div class="info-ip__item">
+                    <h2><i class="fas fa-clock"></i> Timezone</h2>
+                    <span id="timezone">Loading...</span>
+                </div>
+                <div class="info-ip__item">
+                    <h2><i class="fas fa-network-wired"></i> ISP</h2>
+                    <span id="isp">Loading...</span>
+                </div>
+            </div>
+            <div id="map"></div>
         </div>
-        <span class="line"></span>
-        <div class="section">
-          <h5>LOCATION</h5>
-          <P>Brooklyn, NY 10001</P>
-        </div>
-        <span class="line"></span>
-        <div class="section">
-          <h5>TIMEZONE</h5>
-          <P>UTC-05:00</P>
-        </div>
-        <span class="line"></span>
-        <div class="section">
-          <h5>ISP</h5>
-          <P>SpaceX Starlink</P>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="map" id="map"></div>
-  <script src="./js/main.js"></script>
+    </main>
+
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
